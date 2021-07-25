@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Drinkz!</title>
+  </head>
+  <body>
+    <nav id="home-nav">
+      <a href="./drinkName.html">Search by Drink Name </a>
+      <a href="./drinkAlc.html">Search by Alcohol Type </a>
+      <a href="./drinkGlass.html">Search by Glass Type Name </a>
+      <a href="./randDrink.html">Generate Random Recipe </a>
+    </nav>
+
+    <header>
+      <img id="drink-logo" src="./src/martini.png" alt="drink glass" />
+      <h1 id="main-title">Drinkz!</h1>
+      <h3 id="under-head">The perfect recipe for the perfect event</h3>
+      <img id="abstract" src="./src/abstract.png" al="abstract svg" />
+    </header>
+
+    <div id="options">
+      <section class="search-by" id="drink-glass">
+        <h2 class="section-title">Search by Drink Glass Type</h2>
+        <button>
+          <a href="./drinkGlass.html">
+            <img class="arrow" src="./src/curlyarrow.png" alt="arrow"
+          /></a>
+        </button>
+      </section>
+
+      <section class="search-by" id="drink-name">
+        <h2 class="section-title">Search by Drink Name</h2>
+        <button>
+          <a href="./drinkName.html">
+            <img class="arrow" src="./src/curlyarrow.png" alt="arrow"
+          /></a>
+        </button>
+      </section>
+
+      <section class="search-by" id="alc-search">
+        <h2 class="section-title">Search by Alcohol Type</h2>
+        <button>
+          <a href="./drinkAlc.html">
+            <img class="arrow" src="./src/curlyarrow.png" alt="arrow"
+          /></a>
+        </button>
+      </section>
+
+      <section class="search-by" id="random-drink">
+        <h2 class="section-title">
+          Feeling Adventurous? <br />
+          Generate a random drink recipe to try out!
+        </h2>
+        <button>
+          <a href="./randDrink.html">
+            <img class="arrow" src="./src/curlyarrow.png" alt="arrow"
+          /></a>
+        </button>
+      </section>
+    </div>
+    <footer>
+      <p>
+        Api:
+        <a href="https://www.thecocktaildb.com/api.php" target="_blank"
+          >The Cocktail DB</a
+        >
+      </p>
+    </footer>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

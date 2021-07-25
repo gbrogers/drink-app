@@ -1,0 +1,159 @@
+/* NAVBAR */
+nav {
+  display: flex;
+  height: 75px;
+  background-color: black;
+  padding: 30px;
+}
+#home-nav {
+  align-items: center;
+  justify-content: space-evenly;
+}
+#home-nav a {
+  all: unset;
+  color: hotpink;
+}
+#home-nav a:hover {
+  transform: scale(1.02);
+}
+
+body {
+  background-color: rgb(27, 27, 27);
+  margin: 0;
+  z-index: -5;
+}
+#drink-logo {
+  width: 100px;
+  margin-top: 20px;
+  z-index: 2;
+}
+#search-home-logo {
+  width: 55px;
+}
+#main-title {
+  color: rgb(253, 236, 236);
+  font-size: 60px;
+  margin: 15px auto;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  z-index: 2;
+}
+#main-title:hover {
+  transform: scale(1.25);
+  text-shadow: 0 0 15px #0ff;
+}
+header {
+  background-image: linear-gradient(rgb(0, 0, 0), rgb(60, 60, 60));
+  width: 100%;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: -2;
+}
+#abstract {
+  position: absolute;
+  width: 500px;
+  z-index: 0;
+  opacity: 0.7;
+}
+#under-head {
+  color: rgb(253, 236, 236);
+  font-size: 25px;
+  font-style: italic;
+  font-weight: lighter;
+  margin-top: 0px;
+  margin-bottom: 40px;
+  z-index: 2;
+}
+h2 {
+  font-weight: normal;
+  font-size: 30px;
+}
+#options {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  flex-grow: 1;
+  padding: 25px;
+}
+.search-by {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 300px;
+  align-self: center;
+  border-style: solid;
+  border-width: 3px;
+  border-color: black;
+  margin: 25px 25px;
+  border-radius: 5%;
+  padding: 25px;
+}
+button {
+  width: 70%;
+  align-self: center;
+  height: 50%;
+  background-color: rgb(247, 177, 97, 0);
+  border: none;
+}
+.arrow {
+  height: 100%;
+  width: 100%;
+  /* opacity: 0.8; */
+  transform: rotate(45deg);
+}
+.arrow:hover {
+  transform: scale(1.5) rotate(45deg);
+}
+#drink-name {
+  background: radial-gradient(rgb(247, 177, 97, 0.76), #f59f59);
+  flex: 1 1 70px;
+  text-align: center;
+}
+#alc-search {
+  background: radial-gradient(
+    rgba(141, 217, 245, 0.76),
+    rgba(37, 144, 158, 0.76)
+  );
+  flex: 1 1 70px;
+  text-align: center;
+}
+#random-drink {
+  background: radial-gradient(rgba(226, 98, 136, 0.76), #e27398);
+  flex: 1 1 70px;
+  text-align: center;
+}
+#drink-glass {
+  background: radial-gradient(rgba(126, 41, 66, 0.76), #863a54);
+  flex: 1 1 70px;
+  text-align: center;
+}
+
+#drink-glass:hover {
+  transform: scale(1.01);
+  box-shadow: 0px 0px 10px 5px rgb(255, 255, 255);
+}
+#drink-name:hover {
+  transform: scale(1.01);
+  box-shadow: 0px 0px 10px 5px rgb(255, 255, 255);
+}
+#random-drink:hover {
+  transform: scale(1.01);
+  box-shadow: 0px 0px 10px 5px rgb(255, 255, 255);
+}
+#alc-search:hover {
+  transform: scale(1.01);
+  box-shadow: 0px 0px 10px 5px rgb(255, 255, 255);
+}
+.answer-section {
+  display: flex;
+  height: 400px;
+}
+#randRequest {
+  color: black;
+  background-color: white;
+  justify-self: center;
+  width: 400px;
+  height: 50px;
+}
