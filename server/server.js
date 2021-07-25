@@ -1,5 +1,5 @@
 const express = require("express");
-// const cors = require("cors");
+const cors = require("cors");
 const ctrl = require("./controller/ctrl");
 
 const app = express();
@@ -8,11 +8,12 @@ app.use(express.static("public"));
 const path = require("path");
 
 app.use(express.json());
-// app.use(cors());
+app.use(cors());
 
-// app.get("/", (req, res) => {
-//   res.sendFile(path.join(__dirname, "./public/index.html"));
-// });
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "./public/index.html"));
+});
+
 const baseURL = "www.thecocktaildb.com/api/json/v1/1";
 // let drinkName = "margarita" //need to grab this from user input.
 // let alcType = 'vodka' //grab from user input - needs to be updated
