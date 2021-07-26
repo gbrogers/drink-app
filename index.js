@@ -1,7 +1,7 @@
 const randDrinkAns = document.querySelector("#randAnswer");
 const randDrinkRequest = document.querySelector("#randRequest");
 
-const baseURL = "www.thecocktaildb.com/api/json/v1/1";
+const baseURL = "https://www.thecocktaildb.com/api/json/v1/1";
 
 const getRandDrink = () =>
   axios

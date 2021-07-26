@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "./public/index.html"));
 });
 
-const baseURL = "www.thecocktaildb.com/api/json/v1/1";
+const baseURL = "https://www.herethecocktaildb.com/api/json/v1/1";
 // let drinkName = "margarita" //need to grab this from user input.
 // let alcType = 'vodka' //grab from user input - needs to be updated
 // let glassType = 'Cocktail_glass' // grab from user input - needs to be updated
