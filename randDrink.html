@@ -8,17 +8,33 @@
     <title>Random Drink</title>
   </head>
   <body>
-    <nav>
-      <a href="./index.html"
-        ><img id="search-home-logo" src="./src/martini.png" />
-      </a>
+    <a href="./index.html"
+      ><img class="search-home-logo" src="./src/cocktail.png" />
+    </a>
+    <nav id="home-nav">
+      <a href="./drinkName.html">Search by Drink Name </a>
+      <a href="./drinkAlc.html">Search by Alcohol Type </a>
+      <a href="./drinkGlass.html">Search by Glass Type Name </a>
+      <a href="./randDrink.html">Generate Random Recipe </a>
     </nav>
-    <section class="answer-section">
-      <button id="randRequest">Random Generated Drink!</button>
-      <section id="randAnswer"></section>
-    </section>
 
+    <section class="intro-section">
+      <h2>Explore New Drink Recipes</h2>
+      <p>
+        Bored of the same-old drinks and looking to try something new? Give in
+        to your adventurous side and use this random generator to find fun new
+        drink recipes to try!
+      </p>
+    </section>
+    <div class="form-section">
+      <button class="generate-btn" id="rand-request">
+        Generate a Random Recipe!
+      </button>
+    </div>
+    <div class="result-container">
+      <div class="results" id="rand-results"></div>
+    </div>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="index.js"></script>
+    <script src="randDrink.js"></script>
   </body>
 </html>

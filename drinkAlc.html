@@ -8,12 +8,39 @@
     <title>Search Alcohol</title>
   </head>
   <body>
-    <nav>
-      <a href="./index.html"
-        ><img id="search-home-logo" src="./src/martini.png" />
+    <a href="./index.html"
+      ><img class="search-home-logo" src="./src/cocktail.png" />
+    </a>
+    <nav id="home-nav">
+      <a href="./drinkGlass.html">Search Recipes by Glass Type </a>
+      <a href="./drinkName.html">Search Recipes by Drink Name </a>
+      <a href="./drinkAlc.html"
+        ><p id="alc-nav">Search Recipes by Alcohol Type</p>
       </a>
+      <a href="./randDrink.html">Generate Random Recipe </a>
     </nav>
+    <section class="intro-section">
+      <h2>Search Drinks By Alcohol Type</h2>
+      <p>
+        Got a drink in mind and just looking for the recipe? You are in the
+        perfect spot. Please enter the full or partial name of the drink you are
+        looking for in the search bar below and hit submit and we'll help you
+        find that perfect recipe!
+      </p>
+    </section>
+    <div class="form-section">
+      <form>
+        <input
+          type="text"
+          id="value-location"
+          placeholder="Enter Alcohol Type..."
+        />
+        <input type="submit" id="request" value="Search" />
+      </form>
+    </div>
+
+    <div class="results"></div>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="./index.js"></script>
+    <script src="./searchByAlc.js"></script>
   </body>
 </html>

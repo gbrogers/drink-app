@@ -14,16 +14,17 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "./public/index.html"));
 });
 
-const baseURL = "https://www.herethecocktaildb.com/api/json/v1/1";
-// let drinkName = "margarita" //need to grab this from user input.
-// let alcType = 'vodka' //grab from user input - needs to be updated
-// let glassType = 'Cocktail_glass' // grab from user input - needs to be updated
+const baseURL = "https://www.thecocktaildb.com/api/json/v1/1";
+
+let drinkName = "";
+let alcType = "";
+let glassType = "";
 
 //endpoints
 app.get(`${baseURL}/random.php`, ctrl.getRandDrink);
-// app.get(`${baseURL}/search.php?s=${drinkName}`, ctrl.getDrinkByName);
-// app.get(`${baseURL}/filter.php?g=`, ctrl.getDrinkByGlass);
-// app.get(`${baseURL}/search.php?i=${alcType}`, ctrl.getDrinkByAlcohol);
+app.get(`${baseURL}/search.php?s=${drinkName}`, ctrl.getDrinkByName);
+app.get(`${baseURL}/filter.php?g=${glassType}`, ctrl.getDrinkByGlass);
+app.get(`${baseURL}/filter.php?i=${alcType}`, ctrl.getDrinkByAlcohol);
 
 const port = 4004;
 app.listen(port, () => {

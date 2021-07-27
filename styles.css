@@ -4,6 +4,7 @@ nav {
   height: 75px;
   background-color: black;
   padding: 30px;
+  width: 100%;
 }
 #home-nav {
   align-items: center;
@@ -12,34 +13,50 @@ nav {
 #home-nav a {
   all: unset;
   color: hotpink;
+  font-size: 20px;
 }
 #home-nav a:hover {
   transform: scale(1.02);
 }
-
+#glass-nav {
+  color: rgb(111, 169, 54);
+}
+#name-nav {
+  color: rgb(247, 177, 97, 0.76);
+}
+#alc-nav {
+  color: rgba(37, 144, 158, 0.76);
+}
 body {
   background-color: rgb(27, 27, 27);
   margin: 0;
   z-index: -5;
 }
 #drink-logo {
-  width: 100px;
+  width: 150px;
   margin-top: 20px;
   z-index: 2;
+  align-self: center;
 }
-#search-home-logo {
-  width: 55px;
+.search-home-logo {
+  width: 75px;
+  margin-top: 30px;
+  margin-left: 30px;
+  position: absolute;
 }
+
 #main-title {
   color: rgb(253, 236, 236);
   font-size: 60px;
   margin: 15px auto;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   z-index: 2;
+  align-self: center;
+  text-shadow: 0 0 15px #0ff;
 }
 #main-title:hover {
   transform: scale(1.25);
-  text-shadow: 0 0 15px #0ff;
+  text-shadow: 0 0 25px #0ff;
 }
 header {
   background-image: linear-gradient(rgb(0, 0, 0), rgb(60, 60, 60));
@@ -51,12 +68,7 @@ header {
   justify-content: center;
   z-index: -2;
 }
-#abstract {
-  position: absolute;
-  width: 500px;
-  z-index: 0;
-  opacity: 0.7;
-}
+
 #under-head {
   color: rgb(253, 236, 236);
   font-size: 25px;
@@ -65,8 +77,9 @@ header {
   margin-top: 0px;
   margin-bottom: 40px;
   z-index: 2;
+  align-self: center;
 }
-h2 {
+#options h2 {
   font-weight: normal;
   font-size: 30px;
 }
@@ -74,7 +87,6 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   align-content: space-between;
-  flex-grow: 1;
   padding: 25px;
 }
 .search-by {
@@ -96,15 +108,14 @@ button {
   height: 50%;
   background-color: rgb(247, 177, 97, 0);
   border: none;
+  padding: 30px;
 }
 .arrow {
-  height: 100%;
-  width: 100%;
-  /* opacity: 0.8; */
-  transform: rotate(45deg);
+  height: 75px;
+  width: 100px;
 }
 .arrow:hover {
-  transform: scale(1.5) rotate(45deg);
+  transform: scale(1.5);
 }
 #drink-name {
   background: radial-gradient(rgb(247, 177, 97, 0.76), #f59f59);
@@ -125,7 +136,8 @@ button {
   text-align: center;
 }
 #drink-glass {
-  background: radial-gradient(rgba(126, 41, 66, 0.76), #863a54);
+  /* background: radial-gradient(rgba(126, 41, 66, 0.76), #863a54); */
+  background-color: rgb(111, 169, 54);
   flex: 1 1 70px;
   text-align: center;
 }
@@ -146,14 +158,140 @@ button {
   transform: scale(1.01);
   box-shadow: 0px 0px 10px 5px rgb(255, 255, 255);
 }
-.answer-section {
-  display: flex;
-  height: 400px;
-}
-#randRequest {
-  color: black;
-  background-color: white;
+.generate-btn {
+  background: radial-gradient(rgb(247, 177, 97, 0.76), #f59f59);
+  color: rgb(253, 236, 236);
   justify-self: center;
   width: 400px;
-  height: 50px;
+  font-size: 30px;
+  padding: 15px;
+  height: auto;
+  border-radius: 15px;
+}
+.generate-btn:hover {
+  transform: scale(1.03);
+}
+.result-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.results h2 {
+  font-size: 40px;
+  text-align: center;
+}
+.result-img {
+  width: 100%;
+  height: auto;
+}
+
+.answer-section {
+  background: radial-gradient(rgba(226, 98, 136, 0.76), #e27398);
+  padding: 40px;
+  margin: 30px;
+  width: 25%;
+  flex: 1 1 25%;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.results {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.results p {
+  background: radial-gradient(rgb(247, 177, 97, 0.76), #f59f59);
+  padding: 15px;
+  font-size: 20px;
+}
+.results li {
+  font-size: 20px;
+}
+#rand-results {
+  width: 50%;
+  justify-self: center;
+}
+.form-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+form {
+  color: rgb(253, 236, 236);
+  display: flex;
+  background: radial-gradient(
+    rgba(141, 217, 245, 0.76),
+    rgba(37, 144, 158, 0.76)
+  );
+  border-radius: 15px;
+  flex-wrap: wrap;
+  padding: 30px;
+  height: 200px;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+}
+#glass-form {
+  background: radial-gradient(rgba(226, 98, 136, 0.76), #e27398);
+  height: auto;
+  color: lawngreen;
+  display: flex;
+  justify-self: center;
+  font-size: 40px;
+  flex-direction: column;
+  padding: 30px;
+}
+#glass-form input[type="submit"] {
+  width: 200px;
+}
+#glass-list {
+  all: unset;
+}
+
+.form-section div {
+  display: block;
+  margin: 20px;
+}
+
+form p {
+  padding: 30px;
+}
+#value-location {
+  font-size: 20px;
+  padding: 15px;
+  width: 400px;
+  height: 40px;
+  margin-right: 10px;
+}
+#request {
+  font-size: 30px;
+  padding: 15px;
+  height: 75px;
+  border-radius: 15px;
+}
+
+.intro-section {
+  color: rgb(253, 236, 236);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+}
+.intro-section p {
+  width: 50%;
+  text-align: center;
+}
+.intro-section h2 {
+  font-size: 70px;
+  font-weight: 900;
+  margin: 10px;
+  color: rgba(37, 144, 158, 0.76);
+  text-shadow: 0 0 40px #fff;
+  text-align: center;
 }

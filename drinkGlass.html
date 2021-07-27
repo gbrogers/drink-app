@@ -8,13 +8,139 @@
     <title>Drink Glass</title>
   </head>
   <body>
-    <nav>
-      <a href="./index.html"
-        ><img id="search-home-logo" src="./src/martini.png" />
+    <a href="./index.html"
+      ><img class="search-home-logo" src="./src/cocktail.png" />
+    </a>
+    <nav id="home-nav">
+      <a href="./drinkGlass.html"
+        ><p id="glass-nav">Search Recipes by Glass Type</p>
       </a>
+      <a href="./drinkName.html">Search Recipes by Drink Name </a>
+      <a href="./drinkAlc.html">Search Recipes by Alcohol Type </a>
+      <a href="./randDrink.html">Generate Random Recipe </a>
     </nav>
-    <h1>You made it!</h1>
+    <section class="intro-section">
+      <h2>Search Drinks By Cocktail Glass Type</h2>
+      <p>
+        Got a drink in mind and just looking for the recipe? You are in the
+        perfect spot. Please enter the full or partial name of the drink you are
+        looking for in the search bar below and hit submit and we'll help you
+        find that perfect recipe!
+      </p>
+    </section>
+
+    <section class="form-section">
+      <form id="glass-form">
+        <ul id="glass-list">
+          <li>
+            <input
+              class="radio"
+              type="radio"
+              id="champagne_flute"
+              name="glass"
+              value="Champagne Flute"
+            />
+            <label>Champagne Flute</label>
+          </li>
+          <li>
+            <input
+              class="radio"
+              type="radio"
+              id="cocktail_glass"
+              name="glass"
+              value="cocktail_glass"
+            />
+            <label>Cocktail Glass</label>
+          </li>
+          <li>
+            <input
+              class="radio"
+              type="radio"
+              id="white_wine_glass"
+              name="glass"
+              value="white_wine_glass"
+            />
+            <label>White Wine Glass</label>
+          </li>
+          <li>
+            <input
+              class="radio"
+              type="radio"
+              id="highball_glass"
+              name="glass"
+              value="highball_glass"
+            />
+
+            <label>HighBall Glass</label>
+          </li>
+          <li>
+            <input
+              class="radio"
+              type="radio"
+              id="collins_glass"
+              name="glass"
+              value="collins_glass"
+            />
+            <label>Collins Glass</label>
+          </li>
+          <li>
+            <input
+              class="radio"
+              type="radio"
+              id="old-fashioned_glass"
+              name="glass"
+              value="old-fashioned_glass"
+            />
+            <label>Old-Fashioned Glass</label>
+          </li>
+          <li>
+            <input
+              class="radio"
+              type="radio"
+              id="whiskey_sour_glass"
+              name="glass"
+              value="whiskey_sour_glass"
+            />
+            <label>Whiskey Sour Glass</label>
+          </li>
+          <li>
+            <input
+              class="radio"
+              type="radio"
+              id="pitcher"
+              name="glass"
+              value="pitcher"
+            />
+            <label>Pitcher</label>
+          </li>
+          <li>
+            <input
+              class="radio"
+              type="radio"
+              id="punch_bowl"
+              name="glass"
+              value="punch_bowl"
+            />
+
+            <label>Punch Bowl</label>
+          </li>
+          <li>
+            <input
+              class="radio"
+              type="radio"
+              id="shot_glass"
+              name="glass"
+              value="shot_glass"
+            />
+            <label>Shot Glass</label>
+          </li>
+        </ul>
+        <input type="submit" id="request" value="Search" />
+      </form>
+    </section>
+    <div class="results"></div>
+
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="./index.js"></script>
+    <script src="./searchByGlass.js"></script>
   </body>
 </html>
