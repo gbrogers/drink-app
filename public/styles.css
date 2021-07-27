@@ -103,7 +103,9 @@ header {
   border-color: black;
   margin: 25px 25px;
   border-radius: 5%;
-  padding: 25px;
+  padding: 35px;
+  min-width: 200px;
+  max-width: 25%;
 }
 button {
   width: 70%;
@@ -225,6 +227,7 @@ button {
   font-size: 20px;
   padding: 15px;
   border: black solid 3px;
+  list-style-type: circle;
 }
 #rand-results {
   width: 100%;
@@ -302,6 +305,7 @@ form p {
 #glass-form ul {
   list-style-type: none;
 }
+
 #glass-list .radio {
   height: 30px;
   width: 30px;

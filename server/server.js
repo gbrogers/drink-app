@@ -26,7 +26,7 @@ app.get(`${baseURL}/search.php?s=${drinkName}`, ctrl.getDrinkByName);
 app.get(`${baseURL}/filter.php?g=${glassType}`, ctrl.getDrinkByGlass);
 app.get(`${baseURL}/filter.php?i=${alcType}`, ctrl.getDrinkByAlcohol);
 
-const port = 4004;
+const port = process.env.PORT || 4004;
 app.listen(port, () => {
   console.log(`You are running server on port ${port}`);
 });
