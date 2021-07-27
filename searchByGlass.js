@@ -63,7 +63,8 @@ const getDrinkByGlass = (glassType) => {
                   let drinkInstructions = document.createElement("p");
                   drinkInstructions.innerHTML = drinks[0].strInstructions;
                   answerSection.appendChild(drinkInstructions);
-
+                  let ingredientList = document.createElement("section");
+                  answerSection.appendChild(ingredientList);
                   for (j = 1; j < 16; j++) {
                     if (
                       drinks[i][`strIngredient${j}`] === null ||
@@ -78,8 +79,7 @@ const getDrinkByGlass = (glassType) => {
                     ) {
                       drinks[i][`strMeasure${j}`] = "to taste";
                     }
-                    let ingredientList = document.createElement("section");
-                    answerSection.appendChild(ingredientList);
+
                     let ingredient = document.createElement("li");
                     ingredient.innerHTML =
                       drinks[i][`strIngredient${j}`] +

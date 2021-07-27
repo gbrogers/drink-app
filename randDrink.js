@@ -31,6 +31,8 @@ const getRandDrink = () => {
       drinkInstructions.innerHTML = drinks[0].strInstructions;
       answerSection.appendChild(drinkInstructions);
 
+      let ingredientList = document.createElement("section");
+      answerSection.appendChild(ingredientList);
       for (i = 1; i < 16; i++) {
         if (
           drinks[0][`strIngredient${i}`] === null ||
@@ -45,8 +47,6 @@ const getRandDrink = () => {
           drinks[0][`strMeasure${i}`] = "to taste";
         }
 
-        let ingredientList = document.createElement("section");
-        answerSection.appendChild(ingredientList);
         let ingredient = document.createElement("li");
         ingredient.innerHTML =
           drinks[0][`strIngredient${i}`] + ": " + drinks[0][`strMeasure${i}`];

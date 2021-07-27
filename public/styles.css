@@ -1,22 +1,25 @@
 /* NAVBAR */
 nav {
-  display: flex;
-  height: 75px;
+  height: 135px;
   background-color: black;
-  padding: 30px;
   width: 100%;
 }
-#home-nav {
+nav div {
+  margin-left: 90px;
+  display: flex;
   align-items: center;
   justify-content: space-evenly;
+  height: 135px;
 }
 #home-nav a {
   all: unset;
   color: hotpink;
   font-size: 20px;
+  padding: 20px;
 }
 #home-nav a:hover {
   transform: scale(1.02);
+  text-shadow: 0 0 15px #0ff;
 }
 #glass-nav {
   color: rgb(111, 169, 54);
@@ -136,8 +139,7 @@ button {
   text-align: center;
 }
 #drink-glass {
-  /* background: radial-gradient(rgba(126, 41, 66, 0.76), #863a54); */
-  background-color: rgb(111, 169, 54);
+  background: radial-gradient(rgb(153, 226, 80), #5ce277);
   flex: 1 1 70px;
   text-align: center;
 }
@@ -178,18 +180,20 @@ button {
 }
 .results h2 {
   font-size: 40px;
+  margin-top: 7px;
   text-align: center;
 }
 .result-img {
   width: 100%;
   height: auto;
+  border: black solid 3px;
 }
 
 .answer-section {
   background: radial-gradient(rgba(226, 98, 136, 0.76), #e27398);
   padding: 40px;
   margin: 30px;
-  width: 25%;
+  max-width: 25%;
   flex: 1 1 25%;
   border-radius: 15px;
   display: flex;
@@ -203,16 +207,25 @@ button {
   align-items: center;
   justify-content: center;
 }
-.results p {
-  background: radial-gradient(rgb(247, 177, 97, 0.76), #f59f59);
+.answer-section p {
+  background: radial-gradient(rgb(153, 226, 80), #5ce277);
   padding: 15px;
   font-size: 20px;
+  margin: 30px 0;
+  border: black solid 3px;
 }
-.results li {
+
+.answer-section section {
+  background: radial-gradient(
+    rgba(114, 202, 235, 0.76),
+    rgba(37, 144, 158, 0.76)
+  );
   font-size: 20px;
+  padding: 15px;
+  border: black solid 3px;
 }
 #rand-results {
-  width: 30%;
+  width: 700px;
   justify-self: center;
 }
 .form-section {
@@ -220,6 +233,9 @@ button {
   justify-content: center;
   align-items: center;
   width: 100%;
+}
+.form-section #value-location {
+  width: 80%;
 }
 form {
   color: rgb(253, 236, 236);
@@ -232,7 +248,8 @@ form {
   flex-wrap: wrap;
   padding: 30px;
   height: 200px;
-  width: 50%;
+  width: 35%;
+
   justify-content: center;
   align-items: center;
 }
@@ -246,19 +263,10 @@ form {
   flex-direction: column;
   padding: 30px;
 }
-#glass-form input[type="submit"] {
-  width: 200px;
-  margin-top: 30px;
-}
-#glass-list::marker {
-  all: unset;
-}
-
 .form-section div {
   display: block;
   margin: 20px;
 }
-
 form p {
   padding: 30px;
 }
@@ -274,6 +282,15 @@ form p {
   padding: 15px;
   height: 75px;
   border-radius: 15px;
+  width: 200px;
+}
+
+#glass-form ul {
+  list-style-type: none;
+}
+#glass-list .radio {
+  height: 30px;
+  width: 30px;
 }
 
 .intro-section {
@@ -285,8 +302,13 @@ form p {
   margin: 30px;
 }
 .intro-section p {
+  background-color: rgba(253, 236, 236, 0.483);
+  color: black;
+  padding: 15px;
+  border-radius: 13px;
   width: 50%;
   text-align: center;
+  font-size: 23px;
 }
 .intro-section h2 {
   font-size: 70px;
@@ -295,4 +317,14 @@ form p {
   color: rgb(253, 236, 236);
   text-shadow: 0 0 45px #0ff;
   text-align: center;
+}
+
+footer {
+  color: white;
+  background-color: black;
+  min-height: 95vh;
+  height: auto;
+  margin-bottom: 0;
+
+  padding: 30px;
 }
