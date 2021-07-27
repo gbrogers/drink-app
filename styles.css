@@ -33,7 +33,7 @@ body {
   z-index: -5;
 }
 #drink-logo {
-  width: 150px;
+  width: 200px;
   margin-top: 20px;
   z-index: 2;
   align-self: center;
@@ -47,12 +47,12 @@ body {
 
 #main-title {
   color: rgb(253, 236, 236);
-  font-size: 60px;
+  text-shadow: 0 0 15px #0ff;
+  font-size: 100px;
   margin: 15px auto;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   z-index: 2;
   align-self: center;
-  text-shadow: 0 0 15px #0ff;
 }
 #main-title:hover {
   transform: scale(1.25);
@@ -239,7 +239,7 @@ form {
 #glass-form {
   background: radial-gradient(rgba(226, 98, 136, 0.76), #e27398);
   height: auto;
-  color: lawngreen;
+  color: black;
   display: flex;
   justify-self: center;
   font-size: 40px;
@@ -248,8 +248,9 @@ form {
 }
 #glass-form input[type="submit"] {
   width: 200px;
+  margin-top: 30px;
 }
-#glass-list {
+#glass-list::marker {
   all: unset;
 }
 
@@ -291,7 +292,9 @@ form p {
   font-size: 70px;
   font-weight: 900;
   margin: 10px;
-  color: rgba(37, 144, 158, 0.76);
-  text-shadow: 0 0 40px #fff;
+  /* color: rgba(37, 144, 158, 0.76);
+  text-shadow: 0 0 40px #fff; */
+  color: rgb(253, 236, 236);
+  text-shadow: 0 0 45px #0ff;
   text-align: center;
 }

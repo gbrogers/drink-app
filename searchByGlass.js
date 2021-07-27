@@ -1,18 +1,23 @@
 const results = document.querySelector(".results");
 const form = document.querySelector("form");
-const input = document.querySelector("#value-location");
 
 const baseURL = "https://www.thecocktaildb.com/api/json/v1/1";
 
 const getInput = (e) => {
   e.preventDefault();
-  let glassType = input.value;
+
+  let glassType;
+  const items = document.querySelectorAll('input[name="glass"]');
+  for (const item of items) {
+    if (item.checked) {
+      glassType = item.value;
+    }
+  }
   getDrinkByGlass(glassType);
   console.log(glassType);
 };
 form.addEventListener("submit", getInput);
 
-//get drink by name
 const getDrinkByGlass = (glassType) => {
   results.innerHTML = "";
 
@@ -46,34 +51,46 @@ const getDrinkByGlass = (glassType) => {
           drinkImage.className = "result-img";
           drinkImage.src = drinks[i].strDrinkThumb;
           answerSection.appendChild(drinkImage);
+          let thisDrink = drinks[i].strDrink;
 
-          let drinkInstructions = document.createElement("p");
-          drinkInstructions.innerHTML = drinks[0].strInstructions;
-          answerSection.appendChild(drinkInstructions);
+          axios
+            .get(`${baseURL}/search.php?s=${thisDrink}`)
+            .then((res) => {
+              const drinks = res.data.drinks;
 
-          for (j = 1; j < 16; j++) {
-            if (
-              drinks[i][`strIngredient${j}`] === null ||
-              drinks[i][`strIngredient${j}`] === ""
-            ) {
-              break;
-            }
+              for (let i = 0; i < drinks.length; i++) {
+                if (drinks[i].strDrink === thisDrink) {
+                  let drinkInstructions = document.createElement("p");
+                  drinkInstructions.innerHTML = drinks[0].strInstructions;
+                  answerSection.appendChild(drinkInstructions);
 
-            if (
-              drinks[i][`strMeasure${j}`] === null ||
-              drinks[i][`strMeasure${j}`] === ""
-            ) {
-              drinks[i][`strMeasure${j}`] = "to taste";
-            }
-            let ingredientList = document.createElement("section");
-            answerSection.appendChild(ingredientList);
-            let ingredient = document.createElement("li");
-            ingredient.innerHTML =
-              drinks[i][`strIngredient${j}`] +
-              ": " +
-              drinks[i][`strMeasure${j}`];
-            ingredientList.appendChild(ingredient);
-          }
+                  for (j = 1; j < 16; j++) {
+                    if (
+                      drinks[i][`strIngredient${j}`] === null ||
+                      drinks[i][`strIngredient${j}`] === ""
+                    ) {
+                      break;
+                    }
+
+                    if (
+                      drinks[i][`strMeasure${j}`] === null ||
+                      drinks[i][`strMeasure${j}`] === ""
+                    ) {
+                      drinks[i][`strMeasure${j}`] = "to taste";
+                    }
+                    let ingredientList = document.createElement("section");
+                    answerSection.appendChild(ingredientList);
+                    let ingredient = document.createElement("li");
+                    ingredient.innerHTML =
+                      drinks[i][`strIngredient${j}`] +
+                      ": " +
+                      drinks[i][`strMeasure${j}`];
+                    ingredientList.appendChild(ingredient);
+                  }
+                }
+              }
+            })
+            .catch((error) => console.log(error));
         }
       }
     })
