@@ -38,6 +38,13 @@ const getRandDrink = () => {
         ) {
           break;
         }
+        if (
+          drinks[0][`strMeasure${i}`] === null ||
+          drinks[0][`strMeasure${i}`] === ""
+        ) {
+          drinks[0][`strMeasure${i}`] = "to taste";
+        }
+
         let ingredientList = document.createElement("section");
         answerSection.appendChild(ingredientList);
         let ingredient = document.createElement("li");

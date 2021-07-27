@@ -212,7 +212,7 @@ button {
   font-size: 20px;
 }
 #rand-results {
-  width: 50%;
+  width: 30%;
   justify-self: center;
 }
 .form-section {
@@ -292,8 +292,6 @@ form p {
   font-size: 70px;
   font-weight: 900;
   margin: 10px;
-  /* color: rgba(37, 144, 158, 0.76);
-  text-shadow: 0 0 40px #fff; */
   color: rgb(253, 236, 236);
   text-shadow: 0 0 45px #0ff;
   text-align: center;
