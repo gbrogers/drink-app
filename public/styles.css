@@ -20,6 +20,7 @@ nav div {
 #home-nav a:hover {
   transform: scale(1.02);
   text-shadow: 0 0 15px #0ff;
+  cursor: pointer;
 }
 #glass-nav {
   color: rgb(111, 169, 54);
@@ -214,7 +215,7 @@ button {
 .answer-section p {
   background: radial-gradient(rgb(153, 226, 80), #5ce277);
   padding: 15px;
-  font-size: 20px;
+  font-size: 15px;
   margin: 30px 0;
   border: black solid 3px;
 }
@@ -225,7 +226,7 @@ button {
     rgba(37, 144, 158, 0.76)
   );
   font-size: 20px;
-  padding: 15px;
+  padding: 15px 30px;
   border: black solid 3px;
   list-style-type: circle;
 }
@@ -263,7 +264,7 @@ form {
   align-items: center;
 }
 #glass-form {
-  background: radial-gradient(rgba(226, 98, 136, 0.76), #e27398);
+  background: radial-gradient(rgb(153, 226, 80), #5ce277);
   height: auto;
   width: 500px;
   color: black;
@@ -300,6 +301,7 @@ form p {
 #request:hover {
   background-color: rgb(198, 198, 198);
   transform: scale(1.05);
+  cursor: pointer;
 }
 
 #glass-form ul {
@@ -313,6 +315,7 @@ form p {
 
 #glass-list .radio:hover {
   transform: scale(1.2);
+  cursor: pointer;
 }
 
 .intro-section {
