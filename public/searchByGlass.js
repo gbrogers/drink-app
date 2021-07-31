@@ -7,9 +7,9 @@ const getInput = (e) => {
   e.preventDefault();
 
   let glassType;
-  const items = document.querySelectorAll('input[name="glass"]');
+  const items = document.querySelectorAll(".glass-option");
   for (const item of items) {
-    if (item.checked) {
+    if (item.selected) {
       glassType = item.value;
     }
   }

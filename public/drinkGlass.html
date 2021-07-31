@@ -33,111 +33,36 @@
 
     <section class="form-section">
       <form id="glass-form">
-        <ul id="glass-list">
-          <li>
-            <input
-              class="radio"
-              type="radio"
-              id="champagne_flute"
-              name="glass"
-              value="champagne_flute"
-            />
-            <label>Champagne Flute</label>
-          </li>
-          <li>
-            <input
-              class="radio"
-              type="radio"
-              id="cocktail_glass"
-              name="glass"
-              value="cocktail_glass"
-            />
-            <label>Cocktail Glass</label>
-          </li>
-          <li>
-            <input
-              class="radio"
-              type="radio"
-              id="white_wine_glass"
-              name="glass"
-              value="white_wine_glass"
-            />
-            <label>White Wine Glass</label>
-          </li>
-          <li>
-            <input
-              class="radio"
-              type="radio"
-              id="highball_glass"
-              name="glass"
-              value="highball_glass"
-            />
-
-            <label>HighBall Glass</label>
-          </li>
-          <li>
-            <input
-              class="radio"
-              type="radio"
-              id="collins_glass"
-              name="glass"
-              value="collins_glass"
-            />
-            <label>Collins Glass</label>
-          </li>
-          <li>
-            <input
-              class="radio"
-              type="radio"
-              id="old-fashioned_glass"
-              name="glass"
-              value="old-fashioned_glass"
-            />
-            <label>Old-Fashioned Glass</label>
-          </li>
-          <li>
-            <input
-              class="radio"
-              type="radio"
-              id="whiskey_sour_glass"
-              name="glass"
-              value="whiskey_sour_glass"
-            />
-            <label>Whiskey Sour Glass</label>
-          </li>
-          <li>
-            <input
-              class="radio"
-              type="radio"
-              id="pitcher"
-              name="glass"
-              value="pitcher"
-            />
-            <label>Pitcher</label>
-          </li>
-          <li>
-            <input
-              class="radio"
-              type="radio"
-              id="punch_bowl"
-              name="glass"
-              value="punch_bowl"
-            />
-
-            <label>Punch Bowl</label>
-          </li>
-          <li>
-            <input
-              class="radio"
-              type="radio"
-              id="shot_glass"
-              name="glass"
-              value="shot_glass"
-            />
-            <label>Shot Glass</label>
-          </li>
-        </ul>
-        <input type="submit" id="request" value="Search" />
+        <div>
+          <label for="glass-list">Select Glass Type:</label>
+          <select name="glass-list" id="glass-list">
+            <option class="glass-option" value="champagne_flute">
+              Champagne Flute
+            </option>
+            <option class="glass-option" value="cocktail_glass">
+              Cocktail Glass
+            </option>
+            <option class="glass-option" value="white_wine_glass">
+              White Wine Glass
+            </option>
+            <option class="glass-option" value="highball_glass">
+              HighBall Glass
+            </option>
+            <option class="glass-option" value="collins_glass">
+              Collins Glass
+            </option>
+            <option class="glass-option" value="old-fashioned_glass">
+              Old Fashioned Glass
+            </option>
+            <option class="glass-option" value="whiskey_sour_glass">
+              Whiskey Sour Glass
+            </option>
+            <option class="glass-option" value="pitcher">Pitcher</option>
+            <option class="glass-option" value="punch_bowl">Punch Bowl</option>
+            <option class="glass-option" value="shot_glass">Shot Glass</option>
+          </select>
+        </div>
+        <input type="submit" class="request" value="Search" />
       </form>
     </section>
     <div class="results"></div>
