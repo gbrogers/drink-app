@@ -5,7 +5,7 @@
 }
 /* NAVBAR */
 nav {
-  /* height: 135px; */
+  height: 135px;
   background-color: black;
   width: 100%;
 }
@@ -14,15 +14,8 @@ nav div {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  /* height: 135px; */
+  height: 135px;
 }
-/* #home-nav a {
-
-}
-#home-nav a:hover {
-
-} */
-
 #glass-nav {
   color: rgb(111, 169, 54);
 }
@@ -46,9 +39,9 @@ body {
 }
 .search-home-logo {
   width: 75px;
-  /* margin-top: 30px;
-  margin-left: 30px; */
-  /* position: absolute; */
+  margin-top: 20px;
+  margin-left: 20px;
+  position: absolute;
 }
 
 #main-title {
@@ -64,7 +57,7 @@ body {
   transform: scale(1.25);
   text-shadow: 0 0 25px #0ff;
 }
-header {
+.home-header {
   background-image: linear-gradient(rgb(0, 0, 0), rgb(60, 60, 60));
   width: 100%;
   /* height: 415px; */
@@ -341,7 +334,7 @@ form p {
   color: rgb(253, 236, 236);
   text-shadow: 0 0 45px #0ff;
   text-align: center;
-  margin-top: 2em;
+  margin-top: 2.5em;
 }
 
 footer {
@@ -353,15 +346,18 @@ footer {
 
 /* header */
 
-.header {
+.nav-header {
   /* background-color: #fff; */
-  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+  /* box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1); */
+  background-color: black;
   position: fixed;
   width: 100%;
   z-index: 3;
+  display: flex;
+  height: 120px;
 }
 
-.header ul {
+.nav-header ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -380,15 +376,15 @@ footer {
   padding: 20px;
 }
 
-.header li a:hover,
-.header .menu-btn:hover {
+.nav-header li a:hover,
+.nav-header .menu-btn:hover {
   /* background-color: #f4f4f4; */
   transform: scale(1.02);
   text-shadow: 0 0 15px #0ff;
   cursor: pointer;
 }
 
-.header .logo {
+.nav-header .logo {
   display: block;
   float: left;
   font-size: 2em;
@@ -398,24 +394,34 @@ footer {
 
 /* menu */
 
-.header .menu {
+.nav-header .menu {
   clear: both;
   max-height: 0;
   transition: max-height 0.2s ease-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 /* menu icon */
 
-.header .menu-icon {
+.nav-header .menu-icon {
   cursor: pointer;
   display: inline-block;
-  float: right;
-  padding: 28px 20px;
-  position: relative;
+  /* float: right; */
+  /* padding: 28px 20px; */
+  /* position: relative; */
   user-select: none;
 }
+.nav-header .menu-icon {
+  position: absolute;
+  margin-left: 90vw;
+  margin-top: 55px;
+}
 
-.header .menu-icon .navicon {
+.nav-header .menu-icon .navicon {
   background: #333;
   display: block;
   height: 2px;
@@ -424,8 +430,8 @@ footer {
   width: 18px;
 }
 
-.header .menu-icon .navicon:before,
-.header .menu-icon .navicon:after {
+.nav-header .menu-icon .navicon:before,
+.nav-header .menu-icon .navicon:after {
   background: #333;
   content: "";
   display: block;
@@ -435,57 +441,57 @@ footer {
   width: 100%;
 }
 
-.header .menu-icon .navicon:before {
+.nav-header .menu-icon .navicon:before {
   top: 5px;
 }
 
-.header .menu-icon .navicon:after {
+.nav-header .menu-icon .navicon:after {
   top: -5px;
 }
 
 /* menu btn */
 
-.header .menu-btn {
+.nav-header .menu-btn {
   display: none;
 }
 
-.header .menu-btn:checked ~ .menu {
+.nav-header .menu-btn:checked ~ .menu {
   max-height: 240px;
 }
 
-.header .menu-btn:checked ~ .menu-icon .navicon {
+.nav-header .menu-btn:checked ~ .menu-icon .navicon {
   background: transparent;
 }
 
-.header .menu-btn:checked ~ .menu-icon .navicon:before {
+.nav-header .menu-btn:checked ~ .menu-icon .navicon:before {
   transform: rotate(-45deg);
 }
 
-.header .menu-btn:checked ~ .menu-icon .navicon:after {
+.nav-header .menu-btn:checked ~ .menu-icon .navicon:after {
   transform: rotate(45deg);
 }
 
-.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
-.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+.nav-header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.nav-header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
   top: 0;
 }
 
 @media screen and (min-width: 1100px) {
-  .header li {
-    float: left;
+  .nav-header li {
+    /* float: left; */
+    justify-self: left;
   }
-  .header li a {
+  .nav-header li a {
     padding: 20px 30px;
   }
-  .header .menu {
+  .nav-header .menu {
+    display: flex;
+    flex-direction: column;
     clear: none;
-    float: right;
+    /* float: right; */
     max-height: none;
   }
-  .header .menu-icon {
+  .nav-header .menu-icon {
     display: none;
-  }
-  .menu a {
-    padding: 2em;
   }
 }
