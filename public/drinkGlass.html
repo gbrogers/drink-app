@@ -7,20 +7,29 @@
     <link rel="stylesheet" href="./styles.css" />
     <title>Search By Drink Glass</title>
   </head>
-  <body>
+  <header class="nav-header">
     <a href="./index.html"
       ><img class="search-home-logo" src="./src/cocktail.png" />
     </a>
-    <nav id="home-nav">
-      <div>
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn"
+      ><span class="navicon"></span
+    ></label>
+
+    <ul class="menu">
+      <li>
         <a href="./drinkGlass.html"
-          ><p id="glass-nav">Search Recipes by Glass Type</p>
-        </a>
+          ><span id="glass-nav">Search Recipes by Glass Type</span></a
+        >
+      </li>
+      <li>
         <a href="./drinkName.html">Search Recipes by Drink Name </a>
-        <a href="./drinkAlc.html">Search Recipes by Alcohol Type </a>
-        <a href="./randDrink.html">Generate Random Recipe </a>
-      </div>
-    </nav>
+      </li>
+      <li><a href="./drinkAlc.html">Search Recipes by Alcohol Type </a></li>
+      <li><a href="./randDrink.html">Generate Random Recipe </a></li>
+    </ul>
+  </header>
+  <body>
     <section class="intro-section">
       <h2>Search Drinks By Cocktail Glass Type</h2>
       <p>
