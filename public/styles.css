@@ -274,8 +274,6 @@ form {
   color: black;
   display: flex;
   justify-self: center;
-  font-size: 1.5em;
-  /* flex-direction: column; */
   padding: 30px;
 }
 .form-section div {
@@ -351,8 +349,6 @@ footer {
 /* header */
 
 .nav-header {
-  /* background-color: #fff; */
-  /* box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1); */
   background-color: black;
   position: fixed;
   width: 100%;
@@ -366,18 +362,12 @@ footer {
   padding: 0;
   list-style: none;
   overflow: hidden;
-  /* background-color: #fff; */
 }
 
 .header li a {
-  /* display: block;
-  padding: 20px 20px;
-  border-right: 1px solid #f4f4f4;
-  text-decoration: none; */
   all: unset;
   text-decoration: none;
   color: hotpink;
-  /* font-size: 1.2em; */
   padding: 20px;
 }
 
@@ -399,8 +389,6 @@ footer {
 /* menu */
 
 .nav-header .menu {
-  /* list-style-type: none; */
-  /* text-decoration: none; */
   clear: both;
   max-height: 0;
   transition: max-height 0.2s ease-out;
@@ -424,9 +412,6 @@ footer {
 .nav-header .menu-icon {
   cursor: pointer;
   display: inline-block;
-  /* float: right; */
-  /* padding: 28px 20px; */
-  /* position: relative; */
   user-select: none;
 }
 .nav-header .menu-icon {
