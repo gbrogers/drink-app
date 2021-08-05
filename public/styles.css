@@ -80,6 +80,9 @@ body {
   margin-bottom: 20px;
   z-index: 2;
   align-self: center;
+  max-width: 70%;
+  min-width: 250px;
+  text-align: center;
 }
 #options h2 {
   font-weight: normal;
@@ -167,7 +170,8 @@ button {
   background: radial-gradient(rgb(247, 177, 97, 0.76), #f59f59);
   color: rgb(253, 236, 236);
   justify-self: center;
-  width: 400px;
+  max-width: 400px;
+  min-width: 250px;
   font-size: 2.1em;
   padding: 0.5em;
   height: auto;
@@ -257,11 +261,11 @@ form {
   flex-wrap: wrap;
   padding: 30px;
   height: 200px;
-  width: 35%;
-  min-width: 400px;
-
+  max-width: 400px;
+  min-width: 200px;
   justify-content: center;
   align-items: center;
+  margin: 0 10px;
 }
 #glass-form {
   background: radial-gradient(rgb(153, 226, 80), #5ce277);
@@ -322,7 +326,7 @@ form p {
   padding: 15px;
   border-radius: 13px;
   width: 50%;
-  min-width: 500px;
+  min-width: 250px;
   margin-top: 1em;
   text-align: center;
   font-size: 1em;
@@ -488,7 +492,6 @@ footer {
 
 @media screen and (min-width: 1150px) {
   .nav-header li {
-    /* float: left; */
     justify-self: left;
   }
   .nav-header li a {
@@ -505,5 +508,10 @@ footer {
   }
   .nav-header .menu-icon {
     display: none;
+  }
+}
+@media screen and (max-width: 400px) {
+  #main-title {
+    font-size: 5em;
   }
 }

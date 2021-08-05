@@ -8,7 +8,7 @@
     <title>Drinkz!</title>
   </head>
   <body>
-    <a href="./index.html"
+    <!-- <a href="./index.html"
       ><img
         class="search-home-logo"
         src="./src/cocktail.png"
@@ -22,13 +22,35 @@
         <a href="./drinkAlc.html">Search Recipes by Alcohol Type </a>
         <a href="./randDrink.html">Generate Random Recipe </a>
       </div>
-    </nav>
+    </nav> -->
+    <header class="nav-header">
+      <a href="./index.html"
+        ><img class="search-home-logo" src="./src/cocktail.png" />
+      </a>
+      <input class="menu-btn" type="checkbox" id="menu-btn" />
+      <label class="menu-icon" for="menu-btn"
+        ><span class="navicon"></span
+      ></label>
 
-    <header class="home-header">
+      <ul class="menu">
+        <li>
+          <a href="./drinkGlass.html"
+            >Search Recipes by Glass Type</span></a
+          >
+        </li>
+        <li>
+          <a href="./drinkName.html">Search Recipes by Drink Name </a>
+        </li>
+        <li><a href="./drinkAlc.html">Search Recipes by Alcohol Type </a></li>
+        <li><a href="./randDrink.html">Generate Random Recipe </a></li>
+      </ul>
+    </header>
+
+    <div class="home-header">
       <img id="drink-logo" src="./src/cocktail.png" alt="drink glass" />
       <h1 id="main-title">Drinkz!</h1>
       <h3 id="under-head">The perfect recipe for the perfect event</h3>
-    </header>
+    </div>
 
     <div id="options">
       <section class="search-by" id="drink-glass">
