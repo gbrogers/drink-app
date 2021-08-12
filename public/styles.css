@@ -64,7 +64,7 @@ body {
 .home-header {
   background-image: linear-gradient(rgb(0, 0, 0), rgb(60, 60, 60));
   width: 100%;
-  height: 615px;
+  height: 600px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -101,7 +101,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 225px;
+  height: 175px;
   align-self: center;
   border-style: solid;
   border-width: 3px;
@@ -487,10 +487,10 @@ footer {
     all: unset;
     display: flex;
     max-height: none;
-    margin-left: 10vw;
+    margin-left: 100px;
     width: 90%;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
   }
   .nav-header .menu-icon {
     display: none;
