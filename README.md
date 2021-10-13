@@ -4,7 +4,7 @@ Drinkz! is a web application using Vanilla Javascript and makes Axios calls to a
 
 ## Tech Stack
 
-Javascript, CSS, HTML5
+JavaScript | HTML5 | CSS | Axios | Heroku
 
 ## Features
 
