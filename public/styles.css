@@ -386,6 +386,9 @@ footer {
   color: hotpink;
   padding: 20px;
 }
+.menu li a {
+  font-size: 1.2em;
+}
 
 .nav-header li a:hover,
 .nav-header .menu-btn:hover {
@@ -400,6 +403,7 @@ footer {
   font-size: 2em;
   padding: 10px 20px;
   text-decoration: none;
+  max-width: 50px;
 }
 
 /* menu */
